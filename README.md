@@ -21,5 +21,22 @@ The IntelliEye BT has been established in cooperation between Tallinn University
 
 ## Prerequisites
 1. [jQuery](https://jquery.com), download and place in folder, rename to jquery.min.js. Preferred version: jquery-3.2.0.min.js.
-2. [WebGazer](https://github.com/brownhci/WebGazer): [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js)
+2. [WebGazer](https://github.com/brownhci/WebGazer): in particular the minified library [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js) 
+
 Download these files and place them in the "lib" folder. These files are not provided for you herein.
+
+## Setup
+1. Download the project files as shown  by the structure below.
+2. Obtain [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js) and place  in the "lib" folder.
+3. Obtain [jQuery](https://jquery.com), rename to jquery.min.js as necessary, and place in the "lib" folder.
+
+### Project structure
+<pre>start.html
+|- audio
+|- css  
+|- img
+|- js
+|- lib
+ </pre>
+Configuration notes are provided within the files whenever necessary.
+
