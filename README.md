@@ -1,4 +1,4 @@
-# IntelliEye Benchmark Tool
+# IntelliEye xMOOC Benchmark Tool
 
 IntelliEye Benchmark Tool (BT) is a JavaScript-based tool that allows to carry out user studies where users have to perform certain tasks in a timely manner, and collect user performance data at a set interval. The focus on the IntelliEye BT is on user face/eye-gaze detection studies. The tool can be initiated with a set of tasks with assigned time-slots. After initiation the tasks are shown to users in a random order. 
 
