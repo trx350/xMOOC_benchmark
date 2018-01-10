@@ -19,7 +19,9 @@ The IntelliEye BT has been established in cooperation between Tallinn University
 - Auto-experiment ID if you forget to add one
 - Downloadable log file in CSV
 
-<a href="/img/ieye_bt_scr1x600.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr1x200.png" alt="IntelliEye Benchmark Tool in action"></a>
+<a href="/img/ieye_bt_scr1.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr1x200.png" alt="IntelliEye Benchmark Tool in action"></a>
+<a href="/img/ieye_bt_scr2.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr2x200.png" alt="IntelliEye Benchmark Tool in action"></a>
+<a href="/img/ieye_bt_scr3.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr3x200.png" alt="IntelliEye Benchmark Tool in action"></a>
 
 ## Prerequisites
 1. [jQuery](https://jquery.com), download and place in folder, rename to jquery.min.js. Preferred version: jquery-3.2.0.min.js.
