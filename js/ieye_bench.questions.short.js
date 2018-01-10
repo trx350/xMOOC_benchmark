@@ -20,17 +20,5 @@ var question = [
 		txt: "Look on the top right corner of the screen for 5 seconds.", 
 		timeout: 10, 
 		activityTime: 5 
-	}/*, 
-	{ 
-		id: "Q-03", 
-		txt: "You suddenly have an itch on the lower part of your left leg. Scratch it for 2 seconds.", 
-		timeout: 5, 
-		activityTime: 2 
-	}, 
-	{ 
-		id: "Q-04", 
-		txt: "Slowly lean back and forth for 3 times.", 
-		timeout: 10, 
-		activityTime: 6 
-	} */
+	}
 ];
