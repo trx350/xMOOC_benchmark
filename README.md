@@ -44,7 +44,7 @@ Download these files and place them in the "lib" folder. These files are not pro
  </pre>
 Configuration notes are provided within the files whenever necessary.
 
-## Run
+## How to run?
 You can run IntelliEye BT on local machine having a locally running web server, or on a hosted web server over https (required by WebGazer).
 Run it by accessing start.html on your web server resource.
 For debug-view add to url "?view=y".
