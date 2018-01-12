@@ -79,7 +79,8 @@ The IntelliEye BT produces a local log file in CSV; semicolon used as a separato
  - c_eye_pupil_left - clmtrackr face model coordinate point #32 ;
  
  ## Publications
-Tarmo Robal, Yue Zhao, Christoph Lofi and Claudia Hauff. "Towards Real-time Webcam-based Attention Tracking in Online Learning", IUI 2018: The 23rd ACM International Conference on Intelligent User Interfaces, Tokyo, Japan (accepted full paper)
+Tarmo Robal, Yue Zhao, Christoph Lofi and Claudia Hauff. "Webcam-based Attention Tracking in Online Learning: A
+Feasibility Study", IUI 2018: The 23rd ACM International Conference on Intelligent User Interfaces, Tokyo, Japan (accepted full paper)
 
 ## Remarks
 This package is provided as is. Use at own risk.
