@@ -1,16 +1,18 @@
 # IntelliEye xMOOC Benchmark Tool
 
-IntelliEye Benchmark Tool (BT) is a Web application that allows to carry out user studies where participants have to perform certain tasks in a timely manner in front of a Webcam, and collect participant performance data into a log at a set interval. This application was developed to investigate several eye- and face-tracking libraries that make use of a Webcam feed, and has been used in [1] for attention tracking in online learning. The IntelliEye BT is developed using JavaScript, jQuery, CSS, and  runs entirely on user machine in browser environment. The application can be initiated with a custom set of tasks (50 benchmark tasks described in [1] are included) with assigned time-slots. After initiation the tasks are shown to users in a random order. 
+IntelliEye Benchmark Tool (BT) is a Web application that allows to carry out user studies where participants have to perform certain tasks in a timely manner in front of a Webcam, and collect participant performance data into a log at a set interval.
+
+This application was developed to investigate several eye- and face-tracking libraries that make use of a Webcam feed, and has been used in [1] for attention tracking in online learning. The IntelliEye BT is developed using JavaScript, jQuery, CSS, and  runs entirely on user machine in browser environment. The application can be initiated with a custom set of tasks (50 benchmark tasks described in [1] are included) with assigned time-slots. After initiation the tasks are shown to users in a random order. 
 
 The present implementation of the IntelliEye BT uses WebGazer.js (an eye tracking library that uses common webcams to infer the eye-gaze but also allows to capture face coordinates through the exploitation of included trackers) to detect face presence (through tracking.js implementation included in WebGazer.js and clmtrackr face detection features) and user eye-gaze on the screen (using the included clmtrackr). Collected log contains specific metrics captured from the system, as described below.
 
 The IntelliEye BT has been established in cooperation between Tallinn University of Technology (TTÜ) and TU Delft.
 
-If you find this tool useful, please cite the following paper: 
+If you find this application useful, please cite the following paper: 
 
 [1] Tarmo Robal, Yue Zhao, Christoph Lofi and Claudia Hauff. "Webcam-based Attention Tracking in Online Learning: A Feasibility Study", IUI 2018: The 23rd ACM International Conference on Intelligent User Interfaces, Tokyo, Japan (accepted full paper)
 
-<pre>
+```
 @inproceedings{RobalZhaoLofiHauffIUI2018,
   title={Webcam-based Attention Tracking in Online Learning: A Feasibility Study},
   author={Robal, Tarmo and Zhao, Yue and Lofi, Christoph and Hauff, Claudia},
@@ -19,7 +21,7 @@ If you find this tool useful, please cite the following paper:
   year={2018},
   organization={ACM}
 }
-</pre>
+```
 
 ## Architecture
 The high-level architecture of IntelliEye BT is described on the figure below. The IntelliEye BT web application depends on [WebGazer](https://github.com/brownhci/WebGazer) and [jQuery](https://jquery.com).
@@ -44,8 +46,9 @@ The high-level architecture of IntelliEye BT is described on the figure below. T
 1. You need a locally running or hosted web server to run IntelliEye BT. For example, [Apache HTTP Server](http://httpd.apache.org), which was also used for the development of this web application. Yet, IntelliEye BT is web server independent, and you should be able to run it on any web server. 
 
 IntelliEye BT can be run:
- - on local machine having a locally running web server,
- - on a hosted web server, where requests need to be done over https (required by WebGazer).
+- on local machine having a locally running web server,
+- on a hosted web server, where requests need to be done over https (required by WebGazer).
+ 
 2. Download the project files as shown by the structure below (minimum setup).
 	<pre>start.html
 	|- audio
