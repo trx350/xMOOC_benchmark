@@ -7,6 +7,7 @@
 	
 
 var screenContent = { 
+		title: "Intellieye Pilot Study",
 		intro: "<h1>Welcome to the Intellieye Pilot Study</h1> <p>In the following you will be requested to perform different activities you could be engaged with while otherwise normally watching a video. \
 					You will only be shown short instructions what to do and not the associated activity itself. \
 					Please read the <span style='color:#FFFF00'> instructions in yellow</span> and wait for the sound alert. \
@@ -41,6 +42,8 @@ var screenContent = {
 					<p>&nbsp;</p> <p>Experiment ID: <input type='text' id='expid' maxlength='30'> \
 					Prediction rate: <select id='prate'><option value='100'>100ms</option><option value='500'>500ms</option><option value='1000'>1000ms</option></select> \
 					<button id='start' type='button'>Click to START!</button></p>" , 
-		calibrate: "<h1>Intellieye Pilot Study</h1> <p>For quick calibration please face the camera. You will be shown 5 red dots, starting soon. Please follow the dots with your eyes trying to focus on them until the dot appears at a new place. Press \"Continue ...\" when the calibration process is over.</p><br/>"
+		calibrate: "<h1>Intellieye Pilot Study</h1> <p>For quick calibration please face the camera. You will be shown 5 red dots, starting soon. Please follow the dots with your eyes trying to focus on them until the dot appears at a new place. Press \"Continue ...\" when the calibration process is over.</p><br/>" ,
+		finish: "<p style='text-align:center;'>Thank you for participating!</p><p><br />Next you will be offered to download a log file. Please save it!</p><p><button id='btnfin' class='btnfin' type='button'>Finish and download log</button></p>",
+		finalMessage: "<p>Thank you for participating!</p>"
 		
 	};
