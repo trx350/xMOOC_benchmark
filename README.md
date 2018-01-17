@@ -1,12 +1,28 @@
 # IntelliEye xMOOC Benchmark Tool
 
-IntelliEye Benchmark Tool (BT) is a JavaScript-based tool that allows to carry out user studies where users have to perform certain tasks in a timely manner, and collect user performance data at a set interval. The focus on the IntelliEye BT is on user face/eye-gaze detection studies. The tool can be initiated with a set of tasks with assigned time-slots. After initiation the tasks are shown to users in a random order. 
+IntelliEye Benchmark Tool (BT) is a Web application that allows to carry out user studies where participants have to perform certain tasks in a timely manner in front of a Webcam, and collect participant performance data into a log at a set interval. This application was developed to investigate several eye- and face-tracking libraries that make use of a Webcam feed, and has been used in [1] for attention tracking in online learning. The IntelliEye BT is developed using JavaScript, jQuery, CSS, and  runs entirely on user machine in browser environment. The application can be initiated with a custom set of tasks (50 benchmark tasks described in [1] are included) with assigned time-slots. After initiation the tasks are shown to users in a random order. 
 
-Present implementation of the IntelliEye BT is set to use WebGazer.js (an eye tracking library that uses common webcams to infer the eye-gaze but also allows to capture face coordinates through the exploitation of included trackers) to detect face presence (through tracking.js implementation included in WebGazer.js and clmtrackr face detection features) and user eye-gaze on the screen (using the included clmtrackr). Collected log contains specific metrics captured from the system.
-
-The IntelliEye BT was initially developed for the IntelliEye project pilot study on xMOOC user behaviour in front of webcam to explore capabilities of different JavaScript-based libraries for face/eye detection. 
+The present implementation of the IntelliEye BT uses WebGazer.js (an eye tracking library that uses common webcams to infer the eye-gaze but also allows to capture face coordinates through the exploitation of included trackers) to detect face presence (through tracking.js implementation included in WebGazer.js and clmtrackr face detection features) and user eye-gaze on the screen (using the included clmtrackr). Collected log contains specific metrics captured from the system, as described below.
 
 The IntelliEye BT has been established in cooperation between Tallinn University of Technology (TTÜ) and TU Delft.
+
+If you find this tool useful, please cite the following paper: 
+[1] Tarmo Robal, Yue Zhao, Christoph Lofi and Claudia Hauff. "Webcam-based Attention Tracking in Online Learning: A Feasibility Study", IUI 2018: The 23rd ACM International Conference on Intelligent User Interfaces, Tokyo, Japan (accepted full paper)
+
+<pre>
+@inproceedings{RobalZhaoLofiHauffIUI2018,
+  title={Webcam-based Attention Tracking in Online Learning: A Feasibility Study},
+  author={Robal, Tarmo and Zhao, Yue and Lofi, Christoph and Hauff, Claudia},
+  booktitle={Proceedings of the 23rd ACM International Conference on Intelligent User Interfaces (IUI'18)},
+  pages={},
+  year={2018},
+  organization={ACM}
+}
+</pre>
+
+## Architecture
+The high-level architecture of IntelliEye BT is described on the figure below. The IntelliEye BT web application depends on [WebGazer](https://github.com/brownhci/WebGazer) and [jQuery](https://jquery.com).
+<p><a href="/img/intellieye_bt_arch.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/intellieye_bt_arch.png" alt="IntelliEye Benchmark Tool High-Level Architecture" width="700" height="223"></a></p>
 
 ## Features
 - Presentation of custom tasks in random order with differentiated allocated time slots
@@ -23,34 +39,47 @@ The IntelliEye BT has been established in cooperation between Tallinn University
 <a href="/img/ieye_bt_scr2.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr2x200.png" alt="IntelliEye Benchmark Tool in action"></a>
 <a href="/img/ieye_bt_scr3.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr3x200.png" alt="IntelliEye Benchmark Tool in action"></a>
 
-## Prerequisites
-1. [jQuery](https://jquery.com), download and place in folder, rename to jquery.min.js. Preferred version: jquery-3.2.0.min.js.
-2. [WebGazer](https://github.com/brownhci/WebGazer): in particular the minified library [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js) 
+## Setup & Run
+1. You need a locally running or hosted web server to run IntelliEye BT. For example, [Apache HTTP Server](http://httpd.apache.org), which was also used for the development of this web application. Yet, IntelliEye BT is web server independent, and you should be able to run it on any web server. 
+IntelliEye BT can be run on local machine having a locally running web server or on a hosted web server, where requests need to be done over https (required by WebGazer).
+2. Download the project files as shown by the structure below (minimum setup).
+	<pre>start.html
+	|- audio
+	|- css  
+	|- img
+	|- js
+	|- lib
+	 </pre>
+3. Fulfill pre-requisites:
+- Obtain [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js) and place in the "lib" folder.
+- Obtain [jQuery](https://jquery.com), rename to jquery.min.js as necessary, and place in the "lib" folder. Preferred version: jquery-3.2.0.min.js.
+4. Access start.html in your web server through your browser (Chrome, Firefox, Opera have been tested) to run IntelliEye BT web app, e.g. https://yourWebServerAddress/IntelliEyeBT/start.html (hosted web server), or http://localhost/IntelliEyeBT/start.html (web server running on local machine). 
+The screen you should see after successful start is shown on the figure below. This is the start / Intro page.
+<a href="/img/ieye_bt_scr1.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr1x200.png" alt="IntelliEye Benchmark Tool in action"></a>
 
-Download these files and place them in the "lib" folder. These files are not provided for you herein.
+For a debug-view with a webcam videofeed and live face/gaze-detection, add to url the following parameter: "?view=y".
 
-## Setup
-1. Download the project files as shown  by the structure below.
-2. Obtain [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js) and place  in the "lib" folder.
-3. Obtain [jQuery](https://jquery.com), rename to jquery.min.js as necessary, and place in the "lib" folder.
+## How to change the tasks?
+IntelliEye BT comes with 50 benchmark tasks described in [1] established and used for xMOOC user behaviour studies. These tasks describe potential behaviour of xMOOC users in front of webcam while following the MOOC videos. 
 
-### Project structure
-<pre>start.html
-|- audio
-|- css  
-|- img
-|- js
-|- lib
- </pre>
-Configuration notes are provided within the files whenever necessary.
+To change the tasks modify the [/js/ieye_bench.questions.full.js] (/js/ieye_bench.questions.full.js) file. The file is structured as JSON. Instructions are provided in the header.
 
-## How to run?
-You can run IntelliEye BT on local machine having a locally running web server, or on a hosted web server over https (required by WebGazer).
-Run it by accessing start.html on your web server resource.
-For debug-view add to url "?view=y".
+A setup with only 2 tasks for experiments is provided with the ieye_bench.questions.short.js file.
+
+## How to change the GUI?
+To change the title, start/intro screen, the screen for calibration step, and end messages modify the HTML in: [ieye.bench.screencontent.js](/js/ieye.bench.screencontent.js).
+
+To change the look modify the following file: [/css/ieye.bench.css](/css/ieye.bench.css). 
+
+## Replacing the library used for face/eye detection
+The present implementation of the IntelliEye BT is set to use WebGazer.js. To change the library used, you need to modify the following file: [ieye.bench.js](/js/ieye.bench.js). It is advised to set up a function to initialize a library and also set up a global object reference. Then follow the pattern used for clmtrackr and tracking.js in the [ieye.bench.js](/js/ieye.bench.js) file. A good starting point is to look at or modify these methods:
+ - The initialization of the Webgazer with clmtrackr is called in function `initializeWg()`; the tracker object reference is globally held in `var wgcl`.
+ - The initialization of the tracking.js library is  called in function `initTrackerJs()`; the tracker object reference is globally held in `var trackerTaskReference`.
 
 ## Log format and fields
-The IntelliEye BT produces a local log file in CSV; semicolon used as a separator. The log contains the following fields:
+The IntelliEye BT produces a local log file in CSV (Comma Separated Values) format, where semicolon (";") is used as a separator. 
+
+The log contains the following fields as a row in the CVS file in the following order:
 - logRecordNo - log record identificator (integer);
 - experimentID - experiment identificator (string);
 - current_task_id - task identificator (string);
@@ -77,10 +106,6 @@ The IntelliEye BT produces a local log file in CSV; semicolon used as a separato
  - c_face_p14 - clmtrackr face model coordinate point #14 ;
  - c_eye_pupil_right - clmtrackr face model coordinate point #27 ;
  - c_eye_pupil_left - clmtrackr face model coordinate point #32 ;
- 
- ## Publications
-Tarmo Robal, Yue Zhao, Christoph Lofi and Claudia Hauff. "Webcam-based Attention Tracking in Online Learning: A
-Feasibility Study", IUI 2018: The 23rd ACM International Conference on Intelligent User Interfaces, Tokyo, Japan (accepted full paper)
 
 ## Remarks
 This package is provided as is. Use at own risk.
