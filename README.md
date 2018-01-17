@@ -2,7 +2,7 @@
 
 IntelliEye Benchmark Tool (BT) is a Web application that allows to carry out user studies where participants have to perform certain tasks in a timely manner in front of a Webcam, and collect participant performance data into a log at a set interval.
 
-This application was developed to investigate several eye- and face-tracking libraries that make use of a Webcam feed, and has been used in <a href="">[1]</a> for attention tracking in online learning. The IntelliEye BT is developed using JavaScript, jQuery, CSS, and  runs entirely on user machine in browser environment. The application can be initiated with a custom set of tasks (50 benchmark tasks described in <a href="">[1]</a> are included) with assigned time-slots. After initiation the tasks are shown to users in a random order. 
+This application was developed to investigate several eye- and face-tracking libraries that make use of a Webcam feed, and has been used in <a href="#ref-1">[1]</a> for attention tracking in online learning. The IntelliEye BT is developed using JavaScript, jQuery, CSS, and  runs entirely on user machine in browser environment. The application can be initiated with a custom set of tasks (50 benchmark tasks described in <a href="#ref-1">[1]</a> are included) with assigned time-slots. After initiation the tasks are shown to users in a random order. 
 
 The present implementation of the IntelliEye BT uses WebGazer.js (an eye tracking library that uses common webcams to infer the eye-gaze but also allows to capture face coordinates through the exploitation of included trackers) to detect face presence (through tracking.js implementation included in WebGazer.js and clmtrackr face detection features) and user eye-gaze on the screen (using the included clmtrackr). Collected log contains specific metrics captured from the system, as described below.
 
@@ -67,7 +67,7 @@ The screen you should see after successful start is shown on the figure below. T
 For a debug-view with a webcam videofeed and live face/gaze-detection, add to url the following parameter: "?view=y".
 
 ## How to change the tasks?
-IntelliEye BT comes with 50 benchmark tasks described in <a href="">[1]</a> established and used for xMOOC user behaviour studies. These tasks describe potential behaviour of xMOOC users in front of webcam while following the MOOC videos. 
+IntelliEye BT comes with 50 benchmark tasks described in <a href="#ref-1">[1]</a> established and used for xMOOC user behaviour studies. These tasks describe potential behaviour of xMOOC users in front of webcam while following the MOOC videos. 
 
 To change the tasks modify the [/js/ieye_bench.questions.full.js] (/js/ieye_bench.questions.full.js) file. The file is structured as JSON. Instructions are provided in the header.
 
