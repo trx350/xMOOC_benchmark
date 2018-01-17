@@ -53,7 +53,8 @@ IntelliEye BT can be run:
 </ul>
 </li>
 <li>Download the project files as shown by the structure below (minimum setup).
-	<pre>start.html
+<pre>
+    start.html
 	|- audio
 	|  |- sound_in_ring.mp3
 	|  |- sound_out_ding.mp3
