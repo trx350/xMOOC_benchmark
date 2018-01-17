@@ -89,7 +89,7 @@ To change the title, start/intro screen, the screen for calibration step, and en
 To change the look modify the following file: [/css/ieye.bench.css](/css/ieye.bench.css). 
 
 ## Replacing the library used for face/eye detection
-The present implementation of the IntelliEye BT is set to use WebGazer.js. To change the library used, you need to modify the following file: [ieye.bench.js](/js/ieye.bench.js). It is advised to set up a function to initialize a library and also set up a global object reference. Then follow the pattern used for clmtrackr and tracking.js in the [ieye.bench.js](/js/ieye.bench.js) file. A good starting point is to look at or modify these methods:
+The present implementation of the IntelliEye BT is set to use WebGazer.js. To change the library used, you need to modify the following file: [/js/ieye.bench.js](/js/ieye.bench.js). It is advised to set up a function to initialize a library and also set up a global object reference. Then follow the pattern used for clmtrackr and tracking.js in the [/js/ieye.bench.js](/js/ieye.bench.js) file. A good starting point is to look at or modify these methods:
  - The initialization of the Webgazer with clmtrackr is called in function `initializeWg()`; the tracker object reference is globally held in `var wgcl`.
  - The initialization of the tracking.js library is  called in function `initTrackerJs()`; the tracker object reference is globally held in `var trackerTaskReference`.
 
