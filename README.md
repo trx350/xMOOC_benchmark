@@ -55,17 +55,17 @@ IntelliEye BT can be run:
 <li>Download the project files as shown by the structure below (minimum setup).
 	<pre>start.html
 	|- audio
-	   |- sound_in_ring.mp3
-	   |- sound_out_ding.mp3
+	|  |- sound_in_ring.mp3
+	|  |- sound_out_ding.mp3
 	|- css 
-	   |- ieye.bench.css
+	|  |- ieye.bench.css
 	|- img
-	   |- ic_play_circle_filled_black_18dp_1x.png
+	|  |- ic_play_circle_filled_black_18dp_1x.png
 	|- js
-	   |- ieye.bench.screencontent.js
-	   |- ieye_bench.js
-	   |- ieye_bench.questions.full.js
-	   |- wg.mods.js
+	|  |- ieye.bench.screencontent.js
+	|  |- ieye_bench.js
+	|  |- ieye_bench.questions.full.js
+	|  |- wg.mods.js
 	|- lib
 	   |- jquery.min.js (must be downloaded separately)
 	   |- webgazer.min.js (must be downloaded separately)
