@@ -43,13 +43,16 @@ The high-level architecture of IntelliEye BT is described on the figure below. T
 <a href="/img/ieye_bt_scr3.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr3x200.png" alt="IntelliEye Benchmark Tool in action"></a>
 
 ## Setup & Run
-1. You need a locally running or hosted web server to run IntelliEye BT. For example, [Apache HTTP Server](http://httpd.apache.org), which was also used for the development of this web application. Yet, IntelliEye BT is web server independent, and you should be able to run it on any web server. 
-
+<ol>
+<li>You need a locally running or hosted web server to run IntelliEye BT. For example, <a href="http://httpd.apache.org">Apache HTTP Server</a>, which was also used for the development of this web application. Yet, IntelliEye BT is web server independent, and you should be able to run it on any web server. 
+<br />	
 IntelliEye BT can be run:
-- on local machine having a locally running web server,
-- on a hosted web server, where requests need to be done over https (required by WebGazer).
- 
-2. Download the project files as shown by the structure below (minimum setup).
+<ul>
+	<li>on local machine having a locally running web server,</li>
+	<li>on a hosted web server, where requests need to be done over https (required by WebGazer).</li>
+</ul>
+</li>
+<li>Download the project files as shown by the structure below (minimum setup).
 	<pre>start.html
 	|- audio
 	|- css  
@@ -57,21 +60,28 @@ IntelliEye BT can be run:
 	|- js
 	|- lib
 	 </pre>
-3. Fulfill pre-requisites:
-..- Obtain [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js) and place in the "lib" folder.
-..- Obtain [jQuery](https://jquery.com), rename to jquery.min.js as necessary, and place in the "lib" folder. Preferred version: jquery-3.2.0.min.js.
-4. Access start.html in your web server through your browser (Chrome, Firefox, Opera have been tested) to run IntelliEye BT web app, e.g. https://yourWebServerAddress/IntelliEyeBT/start.html (hosted web server), or http://localhost/IntelliEyeBT/start.html (web server running on local machine). 
-The screen you should see after successful start is shown on the figure below. This is the start / Intro page.
+</li>
+<li>Fulfill pre-requisites:
+  <ul>
+	  <li>Obtain <a href="https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js">webgazer.min.js</a> and place in the "lib" folder.</li>
+	  <li>Obtain <a href="https://jquery.com">jQuery</a>, rename to jquery.min.js as necessary, and place in the "lib" folder. Preferred version: jquery-3.2.0.min.js.</li>
+	</ul>
+</li>
+<li>Access start.html in your web server through your browser (Chrome, Firefox, Opera have been tested) to run IntelliEye BT web app, e.g. https://yourWebServerAddress/IntelliEyeBT/start.html (hosted web server), or http://localhost/IntelliEyeBT/start.html (web server running on local machine). </li>
+</ol>
+
+After successful setup (steps 1-4) you should see the Start/Intro screen shown on the figure below. 
+
 <a href="/img/ieye_bt_scr1.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr1x200.png" alt="IntelliEye Benchmark Tool in action"></a>
 
-For a debug-view with a webcam videofeed and live face/gaze-detection, add to url the following parameter: "?view=y".
+For a debug-view with a webcam videofeed and live face/gaze-detection, add to url the following parameter: `"?view=y"`.
 
 ## How to change the tasks?
 IntelliEye BT comes with 50 benchmark tasks described in <a href="#ref-1">[1]</a> established and used for xMOOC user behaviour studies. These tasks describe potential behaviour of xMOOC users in front of webcam while following the MOOC videos. 
 
-To change the tasks modify the [/js/ieye_bench.questions.full.js] (/js/ieye_bench.questions.full.js) file. The file is structured as JSON. Instructions are provided in the header.
+To change the tasks modify the [/js/ieye_bench.questions.full.js](/js/ieye_bench.questions.full.js) file. The file is structured as JSON. Instructions are provided in the header.
 
-A setup with only 2 tasks for experiments is provided with the ieye_bench.questions.short.js file.
+A setup with only 2 tasks for experiments is provided with the [/js/ieye_bench.questions.short.js](/js/ieye_bench.questions.short.js) file.
 
 ## How to change the GUI?
 To change the title, start/intro screen, the screen for calibration step, and end messages modify the HTML in: [ieye.bench.screencontent.js](/js/ieye.bench.screencontent.js).
