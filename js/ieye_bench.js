@@ -18,7 +18,7 @@ $(document).ready(function() {
 	 * SETUP VARIABLES 
 	 * Change the values of constants if necessary	
 	 */
-	const H1_TITLE = "Intellieye Pilot Study";	// Study title in the UI
+	const H1_TITLE = screenContent.title;		// Study title in the UI; default taken from ieye.bench.screencontent.js
 	const PREDICTION_RATE = 100;				// prediction acquiry rate; milliseconds
 	const SUBJECT_HAS_GLASSES = 0;				// 0- none, 1 - glasses, 2 - lenses
 	const SUBJECT_BACKGROUND = 0; 				// 0 - solid-light, 1 - solid black or dark colour, 2 - mixed 2D graphics wall or other mixed, 3 - poster, photo, painting or similar
@@ -165,7 +165,7 @@ $(document).ready(function() {
 	
 	
 	/** 
-	 *	Workaround to launch finish that is dynamically added later
+	 *	Workaround to launch finish that is dynamically added later to the page
 	 */
 	$(document).on('click', '#btnfin', function() {
 		var id = $(this).attr('id');
@@ -173,7 +173,7 @@ $(document).ready(function() {
 	});
 	
 	/** 
-	 *	Workaround to launch doProceed() that is dynamically added later
+	 *	Workaround to launch doProceed() that is dynamically added later to the page
 	 */
 	$(document).on('click', '#btnproceed', function() {
 		var id = $(this).attr('id');
@@ -206,7 +206,7 @@ $(document).ready(function() {
 		}
 		
 		clearInterval(logTaskIntervalRef);
-		$("#instructions-box").html("<h1>" + H1_TITLE + "</h1> <p>Thank you for participating!</p>");
+		$("#instructions-box").html("<h1>" + H1_TITLE + "</h1> " + screenContent.finalMessage);
 
 		saveLog("logRow", "csv");
 	}
@@ -419,7 +419,10 @@ $(document).ready(function() {
 			var shuffledArray = shuffleArray(question);	//arr loaded from ieye_bench.questions
 			var finTaskTimeout = shuffledArray[shuffledArray.length-1].timeout + 10; // needed to properly schedule last task before FIN
 			
-			shuffledArray.push( { id: "FIN", txt: "<p style='text-align:center;'>Thank you for participating!</p><p><br />Next you will be offered to download a log file. Please save it!</p><p><button id='btnfin' class='btnfin' type='button'>Finish and download log</button></p>", timeout: finTaskTimeout, activityTime: 30 });	// add finish button as the last task
+/*			shuffledArray.push( { id: "FIN", txt: "<p style='text-align:center;'>Thank you for participating!</p><p><br />Next you will be offered to download a log file. Please save it!</p><p><button id='btnfin' class='btnfin' type='button'>Finish and download log</button></p>", timeout: finTaskTimeout, activityTime: 30 });	// add finish button as the last task
+*/			
+			shuffledArray.push( { id: "FIN", txt: screenContent.finish, timeout: finTaskTimeout, activityTime: 30 });	// add finish button as the last task
+			
 			$("body").append("<div id='stopper'></div>");
 			stopperTimeoutRef = stopper();
 			startTime = Date.now();  //reset start time
