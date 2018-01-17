@@ -7,6 +7,7 @@ The present implementation of the IntelliEye BT uses WebGazer.js (an eye trackin
 The IntelliEye BT has been established in cooperation between Tallinn University of Technology (TTÜ) and TU Delft.
 
 If you find this tool useful, please cite the following paper: 
+
 [1] Tarmo Robal, Yue Zhao, Christoph Lofi and Claudia Hauff. "Webcam-based Attention Tracking in Online Learning: A Feasibility Study", IUI 2018: The 23rd ACM International Conference on Intelligent User Interfaces, Tokyo, Japan (accepted full paper)
 
 <pre>
@@ -54,8 +55,8 @@ IntelliEye BT can be run:
 	|- lib
 	 </pre>
 3. Fulfill pre-requisites:
-- Obtain [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js) and place in the "lib" folder.
-- Obtain [jQuery](https://jquery.com), rename to jquery.min.js as necessary, and place in the "lib" folder. Preferred version: jquery-3.2.0.min.js.
+..- Obtain [webgazer.min.js](https://github.com/brownhci/WebGazer/blob/master/build/webgazer.min.js) and place in the "lib" folder.
+..- Obtain [jQuery](https://jquery.com), rename to jquery.min.js as necessary, and place in the "lib" folder. Preferred version: jquery-3.2.0.min.js.
 4. Access start.html in your web server through your browser (Chrome, Firefox, Opera have been tested) to run IntelliEye BT web app, e.g. https://yourWebServerAddress/IntelliEyeBT/start.html (hosted web server), or http://localhost/IntelliEyeBT/start.html (web server running on local machine). 
 The screen you should see after successful start is shown on the figure below. This is the start / Intro page.
 <a href="/img/ieye_bt_scr1.png"><img src="https://github.com/trx350/xMOOC_benchmark/blob/master/img/ieye_bt_scr1x200.png" alt="IntelliEye Benchmark Tool in action"></a>
