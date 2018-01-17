@@ -8,6 +8,7 @@ The present implementation of the IntelliEye BT uses WebGazer.js (an eye trackin
 
 The IntelliEye BT has been established in cooperation between Tallinn University of Technology (TTÜ) and TU Delft.
 
+## Publications
 If you find this application useful, please cite the following paper: 
 
 <a name="ref-1">[1] Tarmo Robal, Yue Zhao, Christoph Lofi and Claudia Hauff. "Webcam-based Attention Tracking in Online Learning: A Feasibility Study", IUI 2018: The 23rd ACM International Conference on Intelligent User Interfaces, Tokyo, Japan (accepted full paper)
