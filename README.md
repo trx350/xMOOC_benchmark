@@ -41,7 +41,10 @@ The high-level architecture of IntelliEye BT is described on the figure below. T
 
 ## Setup & Run
 1. You need a locally running or hosted web server to run IntelliEye BT. For example, [Apache HTTP Server](http://httpd.apache.org), which was also used for the development of this web application. Yet, IntelliEye BT is web server independent, and you should be able to run it on any web server. 
-IntelliEye BT can be run on local machine having a locally running web server or on a hosted web server, where requests need to be done over https (required by WebGazer).
+
+IntelliEye BT can be run:
+ - on local machine having a locally running web server,
+ - on a hosted web server, where requests need to be done over https (required by WebGazer).
 2. Download the project files as shown by the structure below (minimum setup).
 	<pre>start.html
 	|- audio
