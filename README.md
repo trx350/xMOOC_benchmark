@@ -76,6 +76,8 @@ After successful setup (steps 1-4) you should see the Start/Intro screen shown o
 
 For a debug-view with a webcam videofeed and live face/gaze-detection, add to url the following parameter: `"?view=y"`.
 
+The log file in CSV is produced at the end of the experiment session and <a href="/img/ieye_bt_scr3.png">offered for download</a> in the browser window.
+
 ## How to change the tasks?
 IntelliEye BT comes with 50 benchmark tasks described in <a href="#ref-1">[1]</a> established and used for xMOOC user behaviour studies. These tasks describe potential behaviour of xMOOC users in front of webcam while following the MOOC videos. 
 
