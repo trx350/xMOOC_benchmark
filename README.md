@@ -96,8 +96,7 @@ The present implementation of the IntelliEye BT is set to use WebGazer.js. To ch
 ## Log format and fields
 The IntelliEye BT produces a local log file in CSV (Comma Separated Values) format, where semicolon (";") is used as a separator. Each record in the log is presented as a single row.
 
-Each row in te log consists of the following fields in the following order:
- the following fields as a  row in the CVS file in the following order:
+Each row in the log consists of the following fields in the following order:
 - logRecordNo - log record identificator (integer);
 - experimentID - experiment identificator (string);
 - current_task_id - task identificator (string);
